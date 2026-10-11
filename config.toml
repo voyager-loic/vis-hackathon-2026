@@ -1,10 +1,5 @@
 baseURL = 'https://yourdomain.com/'
 languageCode = 'en-us'
 title = "Witch's Marionette"
-theme = "terminal"
 pagination.pagerSize = 1
 
-[params]
-  themeColor = "dark" # Options: "terminal", "dark", "light"
-  desktopHeaderNavigation = true
-  showFullContentInList = true # Ensures your post content displays cleanly
