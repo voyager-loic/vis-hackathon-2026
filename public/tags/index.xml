@@ -10,36 +10,6 @@
 		
 		
 		
-			<lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate>
-		
 			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Devlog</title>
-				<link>http://localhost:1313/tags/devlog/</link>
-				<pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/devlog/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>ETH Zurich</title>
-				<link>http://localhost:1313/tags/eth-zurich/</link>
-				<pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/eth-zurich/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Multiplayer</title>
-				<link>http://localhost:1313/tags/multiplayer/</link>
-				<pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/multiplayer/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Spells</title>
-				<link>http://localhost:1313/tags/spells/</link>
-				<pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/spells/</guid>
-				<description></description>
-			</item>
 	</channel>
 </rss>

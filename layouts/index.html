@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  <style>
+    :root {
+      --bg-color: #050505;
+      --text-color: #d1d1d1;
+      --accent-red: #ff1e1e;
+      --dark-red: #8b0000;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Courier New', Courier, monospace;
+      max-width: 850px;
+      margin: 60px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent-red);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      border-bottom: 2px solid var(--dark-red);
+      padding-bottom: 12px;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    h2 {
+      border-bottom: 1px solid rgba(139, 0, 0, 0.4);
+      padding-bottom: 6px;
+      margin-top: 40px;
+    }
+
+    a {
+      color: var(--accent-red);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    blockquote {
+      border-left: 3px solid var(--accent-red);
+      margin-left: 0;
+      padding-left: 15px;
+      color: #fff;
+      background: rgba(139, 0, 0, 0.05);
+      padding: 10px 15px;
+    }
+
+    code {
+      background: #150202;
+      color: #ff6b6b;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--dark-red);
+      margin: 30px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </main>
+</body>
+</html>
