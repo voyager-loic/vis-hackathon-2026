@@ -1,11 +1,24 @@
 {{ define "main" }}
-<h2>Latest Updates</h2>
-<ul>
-  {{ range .Pages }}
-  <li>
-    <a href="{{ .RelPermalink }}" style="color: var(--accent-color); font-size: 1.2rem; font-weight: bold;">{{ .Title }}</a>
-    <span style="color: #888; font-size: 0.9rem;"> - {{ .Date.Format "Jan 2, 2006" }}</span>
-  </li>
+  {{ range first 1 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+    <article>
+      <h1>{{ .Title }}</h1>
+      <p><small>Published on {{ .Date.Format "January 2, 2006" }}</small></p>
+      <hr style="border-color: var(--highlight-color); opacity: 0.3;">
+      <div>
+        {{ .Content }}
+      </div>
+    </article>
+  {{ else }}
+    {{/* Fallback if no posts exist yet */}}
+    {{ range first 1 .Site.RegularPages }}
+      <article>
+        <h1>{{ .Title }}</h1>
+        <p><small>Published on {{ .Date.Format "January 2, 2006" }}</small></p>
+        <hr style="border-color: var(--highlight-color); opacity: 0.3;">
+        <div>
+          {{ .Content }}
+        </div>
+      </article>
+    {{ end }}
   {{ end }}
-</ul>
 {{ end }}
