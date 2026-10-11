@@ -4,3 +4,7 @@ title = "Witch's Marionette"
 pagination.pagerSize = 1
 theme = "dark-marionette"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

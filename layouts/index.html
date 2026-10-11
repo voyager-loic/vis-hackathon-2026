@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Title }}</title>
   <style>
+video {
+  max-width: 100%;       /* Prevents video from overflowing horizontally */
+  max-height: 480px;     /* Prevents video from taking over the screen vertically */
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 24px auto;     /* Centers the video container */
+  border: 1px solid var(--dark-red);
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(255, 30, 30, 0.15); /* Red glowing border matching theme */
+  outline: none;
+}
 img {
     max-width: 100%;       /* Prevents image from stretching wider than the text column */
     max-height: 450px;     /* Limits the vertical height so it doesn't take over the screen */
