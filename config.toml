@@ -1,0 +1,8 @@
+baseURL = 'https://voyager.vsos.ethz.ch/'
+languageCode = 'en-us'
+title = "Marvelling Marionettes DevBlog"
+theme = "dark-marionette"
+
+[params]
+  description = "Devlog for our upcoming top-down multiplayer spellcasting shooter."
+  author = "Game Dev Team"

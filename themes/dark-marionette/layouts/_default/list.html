@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h2>Latest Updates</h2>
+<ul>
+  {{ range .Pages }}
+  <li>
+    <a href="{{ .RelPermalink }}" style="color: var(--accent-color); font-size: 1.2rem; font-weight: bold;">{{ .Title }}</a>
+    <span style="color: #888; font-size: 0.9rem;"> - {{ .Date.Format "Jan 2, 2006" }}</span>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
