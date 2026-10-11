@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Title }}</title>
   <style>
+img {
+    max-width: 100%;       /* Prevents image from stretching wider than the text column */
+    max-height: 450px;     /* Limits the vertical height so it doesn't take over the screen */
+    width: auto;           /* Maintains correct aspect ratio */
+    height: auto;
+    object-fit: contain;  /* Ensures the full image fits cleanly without cropping */
+    display: block;
+    margin: 24px auto;     /* Centers the image with vertical breathing room */
+    border: 1px solid var(--dark-red);
+    box-shadow: 0 0 12px rgba(255, 30, 30, 0.15); /* Subtle red glow matching your theme */
+}
     :root {
       --bg-color: #050505;
       --text-color: #d1d1d1;
