@@ -3,111 +3,260 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
+  <meta name="theme-color" content="#11152b">
   <title>{{ .Title }}</title>
   <style>
-video {
-  max-width: 100%;       /* Prevents video from overflowing horizontally */
-  max-height: 480px;     /* Prevents video from taking over the screen vertically */
-  width: auto;
-  height: auto;
-  display: block;
-  margin: 24px auto;     /* Centers the video container */
-  border: 1px solid var(--dark-red);
-  border-radius: 4px;
-  box-shadow: 0 0 15px rgba(255, 30, 30, 0.15); /* Red glowing border matching theme */
-  outline: none;
-}
-img {
-    max-width: 100%;       /* Prevents image from stretching wider than the text column */
-    max-height: 450px;     /* Limits the vertical height so it doesn't take over the screen */
-    width: auto;           /* Maintains correct aspect ratio */
-    height: auto;
-    object-fit: contain;  /* Ensures the full image fits cleanly without cropping */
-    display: block;
-    margin: 24px auto;     /* Centers the image with vertical breathing room */
-    border: 1px solid var(--dark-red);
-    box-shadow: 0 0 12px rgba(255, 30, 30, 0.15); /* Subtle red glow matching your theme */
-}
     :root {
-      --bg-color: #050505;
-      --text-color: #d1d1d1;
-      --accent-red: #ff1e1e;
-      --dark-red: #8b0000;
+      --ink: #090b17;
+      --ink-soft: #11152b;
+      --panel: rgba(22, 27, 52, 0.82);
+      --parchment: #f3efe4;
+      --muted: #b8bdd0;
+      --violet: #b8a1ff;
+      --violet-deep: #7457c8;
+      --gold: #e9c66f;
+      --teal: #67d9cb;
+      --line: rgba(184, 161, 255, 0.22);
     }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: 'Courier New', Courier, monospace;
-      max-width: 850px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.7;
+      margin: 0;
+      color: var(--parchment);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.72;
+      background:
+        radial-gradient(circle at 82% 5%, rgba(116, 87, 200, 0.18), transparent 29rem),
+        radial-gradient(circle at 8% 34%, rgba(103, 217, 203, 0.09), transparent 25rem),
+        linear-gradient(rgba(184, 161, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(184, 161, 255, 0.035) 1px, transparent 1px),
+        var(--ink);
+      background-size: auto, auto, 42px 42px, 42px 42px, auto;
     }
 
-    h1, h2, h3 {
-      color: var(--accent-red);
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, transparent, rgba(4, 5, 12, 0.42));
+      z-index: -1;
     }
 
-    h1 {
-      border-bottom: 2px solid var(--dark-red);
-      padding-bottom: 12px;
-      margin-bottom: 30px;
-      font-size: 2rem;
+    .site-header {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 30px 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid var(--line);
     }
 
-    h2 {
-      border-bottom: 1px solid rgba(139, 0, 0, 0.4);
-      padding-bottom: 6px;
-      margin-top: 40px;
-    }
-
-    a {
-      color: var(--accent-red);
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--parchment);
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .sigil {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      border: 1px solid rgba(233, 198, 111, 0.65);
+      transform: rotate(45deg);
+      background: rgba(233, 198, 111, 0.06);
+      box-shadow: 0 0 24px rgba(233, 198, 111, 0.11);
     }
 
-    blockquote {
-      border-left: 3px solid var(--accent-red);
-      margin-left: 0;
-      padding-left: 15px;
-      color: #fff;
-      background: rgba(139, 0, 0, 0.05);
-      padding: 10px 15px;
+    .sigil span { transform: rotate(-45deg); font-family: Georgia, serif; font-size: 21px; }
+
+    .brand-copy strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.28rem;
+      letter-spacing: 0.055em;
     }
 
-    code {
-      background: #150202;
-      color: #ff6b6b;
-      padding: 2px 6px;
-      border-radius: 3px;
+    .brand-copy small,
+    .header-note {
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
-    hr {
-      border: 0;
-      border-top: 1px solid var(--dark-red);
-      margin: 30px 0;
+    main {
+      width: min(1040px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 82px 0 70px;
     }
 
-    ul {
-      padding-left: 20px;
+    .hero-copy { max-width: 910px; margin-bottom: 48px; }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: 0.74rem;
+      font-weight: 750;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
     }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 1.13;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 900px;
+      font-size: clamp(3.1rem, 8vw, 6.6rem);
+      letter-spacing: -0.055em;
+    }
+
+    h1 span { color: var(--violet); }
+
+    h2 {
+      margin: 92px 0 22px;
+      max-width: 800px;
+      color: var(--parchment);
+      font-size: clamp(2rem, 4.4vw, 3.45rem);
+      letter-spacing: -0.035em;
+    }
+
+    h2::before {
+      content: "✦";
+      display: block;
+      margin-bottom: 13px;
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
+    h3 { margin: 10px 0 12px; font-size: 1.35rem; color: var(--parchment); }
+    p { color: var(--muted); }
+
+    .lead {
+      max-width: 820px;
+      margin: 30px 0 26px;
+      font-size: clamp(1.12rem, 2vw, 1.4rem);
+      color: #d9d9e6;
+    }
+
+    strong { color: var(--parchment); }
+    em { color: #d8cdfa; }
+
+    .fact-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
+
+    .fact-row span {
+      padding: 7px 12px;
+      color: var(--teal);
+      border: 1px solid rgba(103, 217, 203, 0.3);
+      border-radius: 999px;
+      background: rgba(103, 217, 203, 0.055);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    img, video {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 680px;
+      margin: 48px auto;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #060812;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.38), 0 0 0 1px rgba(233, 198, 111, 0.04) inset;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 38px 0 12px;
+    }
+
+    .feature-grid article {
+      min-height: 250px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: linear-gradient(145deg, rgba(25, 31, 59, 0.9), rgba(15, 18, 37, 0.86));
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    .feature-grid article:nth-child(2n) { border-color: rgba(103, 217, 203, 0.18); }
+
+    .feature-number {
+      color: var(--gold);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+    }
+
+    .feature-grid p { margin-bottom: 0; font-size: 0.96rem; }
+
+    ul { margin: 24px 0; padding: 0; list-style: none; }
 
     li {
-      margin-bottom: 8px;
+      position: relative;
+      margin: 0;
+      padding: 16px 16px 16px 34px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+
+    li:last-child { border-bottom: 1px solid var(--line); }
+    li::before { content: "◇"; position: absolute; left: 7px; color: var(--gold); }
+
+    footer {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 28px 0 42px;
+      color: #777d96;
+      border-top: 1px solid var(--line);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    ::selection { color: var(--ink); background: var(--gold); }
+
+    @media (max-width: 720px) {
+      .site-header { align-items: flex-start; }
+      .header-note { display: none; }
+      main { padding-top: 58px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .feature-grid article { min-height: 0; }
+      h2 { margin-top: 70px; }
+      img, video { margin: 36px auto; border-radius: 8px; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-  </main>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Campus Arcana home">
+      <span class="sigil" aria-hidden="true"><span>CA</span></span>
+      <span class="brand-copy"><strong>Campus Arcana</strong><small>Field notes · Development log</small></span>
+    </a>
+    <span class="header-note">Real-time tactical magic</span>
+  </header>
+  <main>{{ .Content }}</main>
+  <footer>Campus Arcana · Built with Godot · {{ now.Format "2006" }}</footer>
 </body>
 </html>

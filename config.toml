@@ -1,8 +1,11 @@
 baseURL = 'https://yourdomain.com/'
 languageCode = 'en-us'
-title = "Witch's Marionette"
+title = "Campus Arcana"
 pagination.pagerSize = 1
 theme = "dark-marionette"
+
+[params]
+  description = "A real-time tactical squad duel where student mages turn positioning, vision, and spell timing into victory."
 
 [markup]
   [markup.goldmark]

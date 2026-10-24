@@ -1,80 +1,77 @@
 ---
-title: "Witch's Marionette: The Bloodstained Stage"
+title: "Campus Arcana"
 date: 2026-10-11
----
-# Game Title & Concept Ideas
-Currently, our working title is:
-
-**《Witch’s Marionette: The Bloodstained Stage》**
-
-💡 Alternative Title Ideas:
-《Ivory Tower: Marionette’s Requiem》 (Highlighting the academic/jail metaphor)
-《Echoes in the Fog: Witch’s Gambit》 (Emphasizing the sound control & dark forest mechanics)
-《ETH Mensa: Blood & Ink》 (A playful nod to our real-life inspiration)
-
-![alt text](/images/1791707721281.png)
-
+description: "Command four student mages in a real-time online duel built around vision, positioning, and coordinated spellcasting."
 ---
 
-# Game Overview
-**Genre:** Top-Down Online Multiplayer Tactical Shooter
-**Current Game Mode:** 2-Player Free-for-All Deathmatch
-**Core Mechanic:** Auto-shooting movement mechanics combined with real-time strategic multi-character control. To ensure fair gameplay, controlled marionettes alert players to threats but will not automatically chase or turn when enemies leave their vision range.
+<section class="hero-copy">
+  <p class="eyebrow">1v1 online tactical squad combat</p>
+  <h1>Control the angle.<br><span>Control the arena.</span></h1>
+  <p class="lead"><strong>Campus Arcana</strong> is a real-time tactics game in which each player commands a squad of four student mages. Give movement and facing orders, manage limited information, and combine spells to break the opponent's formation before they break yours.</p>
+  <div class="fact-row" aria-label="Game overview">
+    <span>2 players</span><span>4 mages each</span><span>Top-down tactics</span><span>Browser & desktop</span>
+  </div>
+</section>
 
----
+![A wide view of Campus Arcana's destructible dining-hall arena](/images/image.png)
 
-# Key Features & Gameplay Highlights
-## 1. The Dark Forest Hypothesis
-In the dark forest, exposure equals immediate death. Sound effects, visual magic cues, and damage notifications broadcast your position to nearby enemies. Are you a hunter, or are you the prey? Step carefully through the fog, manage your stealth, and survive to the end.
+## One player. Four perspectives.
 
-<video controls src="/images/intro_seq.mp4" title="Title"></video>
+Every mage has an independent position, facing direction, field of view, weapon, mana pool, and three equipped abilities. Units fire automatically when a target enters their line of sight, but they will not solve the fight for you. You decide where the squad moves, which angles it watches, and when it commits.
 
-## 2. Deep Solo-Coop Strategy
-You build and command a team of marionettes alone—no teammates to blame. Precision placement, firing arcs, choice of skills and strategic management of shared line-of-sight are crucial. Watch your own back!
+That creates a fast tactical rhythm: spread out to gather information, hold crossfires, reposition before an opponent can react, and concentrate the squad when a decisive spell becomes available.
 
-![alt text](/images/1791708794971.png)
+<div class="feature-grid">
+  <article>
+    <span class="feature-number">01</span>
+    <h3>Information is a resource</h3>
+    <p>Walls, furniture, fog, and facing direction shape what each squad can see. Enemy positions disappear when contact is lost, so every move carries uncertainty.</p>
+  </article>
+  <article>
+    <span class="feature-number">02</span>
+    <h3>Orders stay readable</h3>
+    <p>Move paths, firing arcs, damage direction, cooldown states, and spell ranges make the battlefield understandable without removing the tension of limited vision.</p>
+  </article>
+  <article>
+    <span class="feature-number">03</span>
+    <h3>Spells reshape a fight</h3>
+    <p>Deploy fog, scan for movement, rush into position, turn invisible, blink across danger, or launch a fireball that damages and displaces anyone caught in the blast.</p>
+  </article>
+  <article>
+    <span class="feature-number">04</span>
+    <h3>The arena does not stay intact</h3>
+    <p>Breakable tables and glass barriers turn fixed cover into temporary cover. Destroying the right object can open a route, remove a defensive angle, or expose a retreat.</p>
+  </article>
+</div>
 
-![alt text](/images/1791709276690.png)
+## Command at your own pace—or by voice
 
-## 3. Voice Control & Keyboard Hybrid
-Command your characters using standard mouse/keyboard input—or use Voice Commands to free up your hands. But beware: voice recognition can be imperfect in the heat of battle. How much risk are you willing to take for tactical freedom?
+Mouse and keyboard controls provide direct unit selection, movement, facing, and ability casting. Voice commands offer a second layer of control: call a mage by name, give a directional order, command the whole squad, or cast an equipped spell while your hands remain on the tactical controls.
 
-## 4. Simultaneous Casting & Tactical Friendly Fire
-Casting a spell broadcasts it simultaneously across all active units that have the spell equipped and sufficient mana.
+Commands can be short—*“Alpha left 30”*—or chained—*“Bravo go left and watch up.”* Voice control is optional, so both input styles can be mixed at any moment.
 
-**Friendly Fire:** Poor positioning can kill your own marionettes.
-**Denial Mechanics:** Sacrificing or controlling your own damaged marionette can prevent opponents from gaining kill bonuses or tactical advantages!
+![Four student mages coordinate overlapping sight lines during a match](/images/game_1.png)
 
-![alt text](/images/game_1.png)
+## Build a squad plan, then adapt it
 
-![alt text](/images/game_2.png)
+Before the match, each mage receives a three-spell loadout. During play, mana and cooldowns prevent constant casting, while friendly fire makes careless area attacks dangerous. The strongest combinations depend on formation: a scan can reveal movement, fog can deny a sight line, and a well-timed mobility spell can turn that information into a flank.
 
-## 5. Unstable Magic System
-Spelling matters! Your wand is picky. Failing to chant a spell correctly (or experiencing voice recognition resistance) simulates the difficulty of true spellcraft—or perhaps the lingering soul of the marionette rebelling against control!
+The result is not a traditional shooter and not a turn-based strategy game. It is a compact real-time duel about attention—reading several spaces at once, anticipating the opponent, and issuing the right order before a temporary advantage disappears.
 
-## 6. Dynamic & Breakable Maps##
-Modify the battlefield on the fly. Destroy obstacles or create terrain barriers using elemental spells to shape chokepoints and control line-of-sight.
+![The Campus Arcana interface showing squad cards, abilities, and battlefield vision](/images/game_2.png)
 
-## 7. Real-World Map Design##
-**Large Strategic Scale:** Ample room for stealth, flank maneuvers, and tactical setups.
-**Familiar Place:** The primary map features ETH Zurich Mensa flattened into a 2D battleground!
+## A campus turned tactical arena
 
-![alt text](/images/image.png)
+The current map is a large dining hall divided by long table rows, counters, damaged walls, and a connected service room. Two entrances bring the squads onto opposite sides of the arena. From there, multiple lanes, destructible shortcuts, and asymmetric debris create room for reconnaissance, ambushes, and coordinated pushes.
 
----
+The map is intentionally bigger than a single screen. Following one mage too closely means losing awareness elsewhere; zooming out reveals structure but sacrifices detail. Managing that tension is part of commanding the squad.
 
-# Roadmap & What’s Coming Next
-We have ambitious plans for upcoming updates:
+## Current development focus
 
-**Game Mode Evolution:** Adding rewards for actions during matches and match completion.
-**Dynamic Circle:** Randomly shrinking safe zones to force late-game encounters.
-**Expanded Arsenal:** A large pile of pending spells (with upcoming spell classifications), new wands, and distinct wands selection.
-**Map Expansion:** New maps, spawn points, and new game modes (Capture the Flag, Point Control, PvE Practice, and PvE Story Mode).
-**Bosses & World Events:** Boss spawns, map events, and triggerable map mechanisms, more players.
-**Progression Systems:** Ranking, XP unlocks, Achievement System, and in-game currency to purchase wands and items.
-**Aesthetics:** Custom dark-fantasy art style, custom soundtracks, sound feedback improvements, and skin customization for marionettes, wands, and spells!
-**QoL & Systems:** Continuous balance tuning, improved voice recognition accuracy, and anti-cheat systems.
+Campus Arcana is being refined around three priorities:
 
----
+- **Combat clarity:** stronger hit feedback, readable damage direction, clearer spell ranges, and distinct destruction sounds.
+- **Performance:** scalable graphics presets and efficient visibility rendering for lower-powered laptops and web browsers.
+- **Reliable online play:** simple hosting, straightforward LAN sharing, and a consistent match flow from deployment to rematch.
 
-Your support is our driving force for updates! Let us know your thoughts on the title options and features in the comments!
+The next passes will deepen destruction, improve the opening sequence, sharpen tactical readability, and continue balancing the map around meaningful routes and sight lines.
